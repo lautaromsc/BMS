@@ -7,10 +7,12 @@ import { MainNavComponent } from './main-nav/main-nav.component';
 import { AppComponent } from './app.component';
 
 const routes: Routes = [
-  { path: '',                 component: MainNavComponent },
+
   { path: 'MainNavComponent', component: MainNavComponent },
   { path: 'home',             component: HomeComponent },
-  { path: 'ventas',           component: BandejaComponent },
+  //{ path: 'ventas',           component: BandejaComponent },
+  
+  { path: 'pos', loadChildren: () => import('./punto-de-venta/punto-de-venta.module').then(m => m.PuntoDeVentaModule) },
   
 ];
 
