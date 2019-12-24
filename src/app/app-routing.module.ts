@@ -6,14 +6,15 @@ import { MainNavComponent } from './main-nav/main-nav.component';
 import { NavbarComponent } from './navbar/navbar.component';
 
 const routes: Routes = [
+  
   { path: '', component: MainNavComponent },
-  { path: 'home', component: HomeComponent },
-  { path: 'bandeja', component: BandejaComponent },
-
   { path: 'MainNavComponent', component: MainNavComponent },
-  { path: 'bandeja', component: BandejaComponent },
+  
+  { path: 'pos',              component: NavbarComponent },
+  { path: 'home',             component: HomeComponent },
+  { path: 'pos',              component: NavbarComponent },
+  { path: 'ventas',           component: BandejaComponent },
 
-  { path: 'navBar', component: NavbarComponent }
 ];
 
 @NgModule({

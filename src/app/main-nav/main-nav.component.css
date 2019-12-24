@@ -16,14 +16,7 @@
   z-index: 1;
 }
 
-.hidden {
-  display: none;
+.mat-toolbar.mat-primary {
+  background: #007bff;
+  color: #fff;
 }
-
-/*
-@media (min-width: 768px){
-  .sidenav {
-    display: none;
-  }
-}
-*/
