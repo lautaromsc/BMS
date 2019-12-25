@@ -1,19 +1,13 @@
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
 
-
-
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
 
-
-
-
 import { BandejaComponent } from './bandeja/bandeja.component';
 import { HomeComponent } from './home/home.component';
-import { SidenavComponent } from './sidenav/sidenav.component';
 import { MainNavComponent } from './main-nav/main-nav.component';
 import { LayoutModule } from '@angular/cdk/layout';
 
@@ -23,13 +17,15 @@ import { MatIconModule } from '@angular/material/icon';
 import { MatListModule } from '@angular/material/list';
 
 
+import { ChartistModule } from 'ng-chartist'
+
+
 
 @NgModule({
   declarations: [
     AppComponent,
     BandejaComponent,
     HomeComponent,
-    SidenavComponent,
     MainNavComponent
   ],
   imports: [
@@ -44,6 +40,8 @@ import { MatListModule } from '@angular/material/list';
     MatSidenavModule,
     MatIconModule,
     MatListModule,
+
+    ChartistModule
   ],
   providers: [],
   bootstrap: [AppComponent]
