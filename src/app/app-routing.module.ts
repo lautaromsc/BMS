@@ -12,7 +12,7 @@ const routes: Routes = [
   { path: 'home',             component: HomeComponent },
   //{ path: 'ventas',           component: BandejaComponent },
   
-  { path: 'pos', loadChildren: () => import('./punto-de-venta/punto-de-venta.module').then(m => m.PuntoDeVentaModule) },
+  { path: 'pos', loadChildren: () => import('./modules/punto-de-venta/punto-de-venta.module').then(m => m.PuntoDeVentaModule) },
   
 ];
 
