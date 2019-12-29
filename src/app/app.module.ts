@@ -18,6 +18,8 @@ import { MatListModule } from '@angular/material/list';
 
 
 import { ChartistModule } from 'ng-chartist'
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
+import { HttpClientModule } from '@angular/common/http';
 
 
 
@@ -32,6 +34,8 @@ import { ChartistModule } from 'ng-chartist'
     BrowserAnimationsModule,
     AppRoutingModule,
     BrowserModule,
+    HttpClientModule,
+    
     NgbModule,
 
     MatToolbarModule,

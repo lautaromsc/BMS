@@ -7,17 +7,14 @@ import { ComprasComponent } from './compras/compras.component';
 import { ProductosComponent } from './productos/productos.component';
 
 const routes: Routes = [
-
-  { path: '', component: PuntoDeVentaComponent, children: [
-
-    { path: 'ventas', component: VentasComponent },
-    { path: 'productos', component: ProductosComponent },
-    { path: 'compras', component: ComprasComponent },
-    
-  ]},
-
-  
-
+  {
+     path: '', component: PuntoDeVentaComponent,
+     children: [
+      { path: 'ventas', component: VentasComponent },
+      { path: 'productos', component: ProductosComponent },
+      { path: 'compras', component: ComprasComponent },
+     ]
+  }
 ];
 
 @NgModule({
