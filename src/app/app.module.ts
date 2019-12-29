@@ -6,9 +6,7 @@ import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
 
-import { BandejaComponent } from './bandeja/bandeja.component';
-import { HomeComponent } from './home/home.component';
-import { MainNavComponent } from './main-nav/main-nav.component';
+import { MainNavComponent } from './componentes/main-nav/main-nav.component';
 import { LayoutModule } from '@angular/cdk/layout';
 
 import { MatToolbarModule, MatButtonModule } from '@angular/material/';
@@ -16,19 +14,18 @@ import { MatSidenavModule } from '@angular/material/sidenav';
 import { MatIconModule } from '@angular/material/icon';
 import { MatListModule } from '@angular/material/list';
 
-
 import { ChartistModule } from 'ng-chartist'
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { HttpClientModule } from '@angular/common/http';
+import { MenuComponent } from './modules/dashboard/menu/menu.component';
 
 
 
 @NgModule({
   declarations: [
     AppComponent,
-    BandejaComponent,
-    HomeComponent,
-    MainNavComponent
+    MainNavComponent,
+    MenuComponent
   ],
   imports: [
     BrowserAnimationsModule,
@@ -37,7 +34,6 @@ import { HttpClientModule } from '@angular/common/http';
     HttpClientModule,
     
     NgbModule,
-
     MatToolbarModule,
     MatButtonModule,
     LayoutModule,
