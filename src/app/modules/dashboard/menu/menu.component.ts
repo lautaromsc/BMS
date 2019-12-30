@@ -5,13 +5,13 @@ import { Component, OnInit } from '@angular/core';
   templateUrl: './menu.component.html',
   styleUrls: ['./menu.component.css']
 })
-export class MenuComponent implements OnInit {
+export class MenuDashComponent implements OnInit {
 
 
 
   navLinks = [
-    {path: "['./ventas']", label: 'stats'},
-    {path: "['./bi']", label: 'bi'}
+    {path: "stats", label: 'stats'},
+    {path: "bi", label: 'bi'}
 
   ]
   

@@ -7,6 +7,7 @@ const routes: Routes = [
 
   { path: 'MainNavComponent', component: MainNavComponent },
   { path: 'pos', loadChildren: () => import('./modules/punto-de-venta/punto-de-venta.module').then(m => m.PuntoDeVentaModule) },
+  { path: 'dashboard', loadChildren: () => import('./modules/dashboard/dashboard.module').then(m => m.DashboardModule) },
   
 ];
 

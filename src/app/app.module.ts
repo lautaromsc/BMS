@@ -15,9 +15,8 @@ import { MatIconModule } from '@angular/material/icon';
 import { MatListModule } from '@angular/material/list';
 
 import { ChartistModule } from 'ng-chartist'
-import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { HttpClientModule } from '@angular/common/http';
-import { MenuComponent } from './modules/dashboard/menu/menu.component';
+
 
 
 
@@ -25,7 +24,6 @@ import { MenuComponent } from './modules/dashboard/menu/menu.component';
   declarations: [
     AppComponent,
     MainNavComponent,
-    MenuComponent
   ],
   imports: [
     BrowserAnimationsModule,
