@@ -9,7 +9,7 @@ import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
 import { MainNavComponent } from './componentes/main-nav/main-nav.component';
 import { LayoutModule } from '@angular/cdk/layout';
 
-import { MatToolbarModule, MatButtonModule } from '@angular/material/';
+import { MatToolbarModule, MatButtonModule, MatTabsModule } from '@angular/material/';
 import { MatSidenavModule } from '@angular/material/sidenav';
 import { MatIconModule } from '@angular/material/icon';
 import { MatListModule } from '@angular/material/list';
@@ -40,7 +40,7 @@ import { MenuComponent } from './modules/dashboard/menu/menu.component';
     MatSidenavModule,
     MatIconModule,
     MatListModule,
-
+    MatTabsModule,
     ChartistModule
   ],
   providers: [],
