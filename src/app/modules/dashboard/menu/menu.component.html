@@ -1,9 +1,16 @@
+
+
+<mat-toolbar-row>
+  <span>DASHBOARD MODULE</span>
+</mat-toolbar-row>
+
 <nav mat-tab-nav-bar>
-    <a mat-tab-link
-       *ngFor="let link of navLinks"
-       [routerLink]="link.path"
-       routerLinkActive #rla="routerLinkActive"
-       [active]="rla.isActive">
-      {{link.label}}
-    </a>
-  </nav>
+  <a mat-tab-link
+      *ngFor="let link of navLinks"
+      [routerLink]="link.path"
+      routerLinkActive #rla="routerLinkActive"
+      [active]="rla.isActive">
+    {{link.label}}
+  </a>
+</nav>
+

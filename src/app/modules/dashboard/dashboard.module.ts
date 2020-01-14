@@ -10,6 +10,7 @@ import { MatToolbarModule, MatButtonModule, MatSidenavModule, MatIconModule, Mat
 import { LayoutModule } from '@angular/cdk/layout';
 import { MenuDashComponent } from './menu/menu.component';
 
+import { ChartsModule } from 'ng2-charts';
 
 @NgModule({
   declarations: [DashboardComponent, MenuDashComponent, StatsComponent, BussinesInteligenceComponent],
@@ -24,7 +25,8 @@ import { MenuDashComponent } from './menu/menu.component';
     MatSidenavModule,
     MatIconModule,
     MatListModule,
-    MatTabsModule 
+    MatTabsModule,
+    ChartsModule 
   ]
 })
 export class DashboardModule { }
