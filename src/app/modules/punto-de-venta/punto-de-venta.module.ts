@@ -11,7 +11,7 @@ import { ProductosComponent } from './productos/productos.component';
 
 
 
-import { MatToolbarModule, MatButtonModule } from '@angular/material/';
+import { MatToolbarModule, MatButtonModule, } from '@angular/material/';
 import { MatSidenavModule } from '@angular/material/sidenav';
 import { MatIconModule } from '@angular/material/icon';
 import { MatListModule } from '@angular/material/list';
@@ -24,6 +24,7 @@ import { MenuComponent } from './menu/menu.component';
     CommonModule,
     PuntoDeVentaRoutingModule,
     MatToolbarModule,MatButtonModule,MatSidenavModule,MatIconModule,MatListModule
+    
   ]
 })
 export class PuntoDeVentaModule { }

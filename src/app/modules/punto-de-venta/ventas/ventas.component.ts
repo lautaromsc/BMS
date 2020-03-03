@@ -14,8 +14,16 @@ import { FormBuilder, FormGroup } from '@angular/forms';
 
 export class VentasComponent implements OnInit {
 
+
+
   ngOnInit(){
     
   }
+
+
+
+  changeEvent(){
+    
+   }
 
 }
