@@ -4,15 +4,27 @@ const app = express();
 const productRoutes = require('./api/routes/products');
 const productOrders = require('./api/routes/orders');
 
+app.use(morgan('dev'));
+
 app.use('/products', productRoutes);
 app.use('/orders', productOrders);
 
-/*
+
 app.use((req, res, next) => {
-    res.status(200).json({
-        message: 'It works!'
+    const error = new Error('Not found');
+    error.status(404);
+    next(error);
+});
+
+app.use((error, req, res, next) => {
+    res.status(err.status || 500);
+    res.json({
+        error: {
+            message: error.message
+        }
     });
 });
-*/
+
+
 
 module.exports = app;
