@@ -1,3 +1,141 @@
 
 
 <h1>productos works!</h1>
+
+<header>
+    <nav class="navbar navbar-expand-sm navbar-light bg-light" 
+        style="margin-top: -5px;">
+        <div style="cursor: pointer;">
+            <a 
+                style="border-radius: 34px;" 
+                class="btn btn-warning btn-sm float-sm-right text-center" 
+                role="button" 
+                aria-haspopup="true" 
+                aria-expanded="false">
+                <i class="fas fa-angle-double-left"></i>
+            </a>
+        </div>
+    </nav>
+</header>
+
+
+<div>
+
+    <div class="panel panel-warning color_table_menu">
+
+        <div class="card">
+            <div class="card-header small_card"><b>Resultados Fases. </b>
+                <div class="square">
+                    <span class="plus">
+                        <i (click)="agregarResFase()" class="fas fa-plus"></i>
+                    </span>
+                </div>
+            </div>
+        </div>
+
+        <div *ngIf="error" class="alert alert-danger animated fadeIn">
+            <h3>Error</h3>
+            <p> {{ mensajeError }} </p>
+        </div>
+
+        <div *ngIf="!cargando" class="panel panel-warning color_table_menu">
+
+            <form 
+                [formGroup]="formResFase" 
+                novalidate="" 
+                class="form-horizontal form-inline" 
+                role="form" 
+                autocomplete="off">
+
+                <table class="table table-xs table-bordered table-hover table_expediente">
+                    <thead>
+                        <tr>
+                            <th scope="col">Id Res Fase</th>
+                            <th scope="col">Nombre</th>
+                            <th scope="col">Tipo Litigio</th>
+                            <th scope="col">Fecha Inicio</th>
+                            <th scope="col">Fecha Fin</th>
+                            <th scope="col" style="width: 4px !important"></th>
+                        </tr>
+                    </thead>
+
+                    <tbody formArrayName="fasesDinam">
+                        <tr class="registro" 
+                            *ngFor="let segDin of FasesDinam.controls; let i = index;" 
+                            [formGroupName]="i">
+
+                            <td><input formControlName="FAR_ID_FASE_RESULTADO" class="form-control"></td>
+
+                            <td><input formControlName="FAR_NM_FASE_RESULTADO" style="width: 40rem" class="form-control" ></td>
+
+                            <td>
+                                <select 
+                                    class="form-control" 
+                                    formControlName="TPL_ID_TP_LITIGIO" 
+                                    style="max-width: 185px;">
+                                    <option *ngFor="let liti of selectTipoLit"
+                                        [value]="liti.TPL_ID_TP_LITIGIO">
+                                        {{liti.TPL_NM_TP_LITIGIO}}
+                                    </option>
+                                </select>                                
+                            </td>
+
+                            <td> <input class="form-control" formControlName="FAR_DT_START"> </td> 
+
+                            <td> <input class="form-control" formControlName="FAR_DT_END"> </td>  
+
+                            <td style="width: 4px !important">
+                                <i  class="far fa-trash-alt fa-lg" 
+                                    (click)="removeResFaseDinam(i)" 
+                                    style="cursor: pointer">
+                                </i>
+                            </td>
+                        </tr>
+                        
+                    </tbody>
+
+                    <tbody formArrayName="fases">
+                        <tr *ngFor="let resFase of Fases.controls; let i = index;" [formGroupName]="i">
+
+                            <td><input class="form-control" formControlName="FAR_ID_FASE_RESULTADO"></td>
+
+                            <td><input class="form-control" style="width: 40rem" formControlName="FAR_NM_FASE_RESULTADO"></td>
+                            
+                            <td>
+                                <select class="form-control" formControlName="TPL_ID_TP_LITIGIO">
+                                    <option value="" *ngFor="let liti of selectTipoLit" [value]="liti.TPL_ID_TP_LITIGIO" >
+                                        {{liti.TPL_NM_TP_LITIGIO}}
+                                    </option>
+                                </select>                                
+                            </td>
+                         
+                            <td> <input class="form-control" formControlName="FAR_DT_START"> </td> 
+
+                            <td> <input class="form-control" formControlName="FAR_DT_END"> </td>  
+
+                                                   
+                            <td style="width: 4px !important"></td>
+                        </tr>
+                    </tbody>
+
+                </table>
+
+                <div class="row">
+                    <p style="width:98%; height:100%; font-size: 15px;">
+                </div>
+
+                <div class="row" 
+                style="width:98%; height:100%; font-size: 15px; margin-top: 15px; margin-bottom: 15px;">
+                    <div class="col-sm-12 text-center">
+                        <button 
+                            class="btn btn-warning" 
+                            style="width:200px; height:100%; font-size: 15px; border-radius:40px">           
+                            Guardar
+                        </button>
+                    </div>
+                </div>
+
+            </form>
+        </div>
+    </div>
+</div>

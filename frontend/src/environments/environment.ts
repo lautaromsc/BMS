@@ -3,7 +3,13 @@
 // The list of file replacements can be found in `angular.json`.
 
 export const environment = {
-  production: false
+  production: false,
+
+  token: 'Basic QVJYMDAwMDg4MTpJc3Rvcm1pbmcyMDIw',
+  indice: '/',
+
+  getMtoResFase: 'api/games',
+
 };
 
 /*

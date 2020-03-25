@@ -16,6 +16,8 @@ import { MatSidenavModule } from '@angular/material/sidenav';
 import { MatIconModule } from '@angular/material/icon';
 import { MatListModule } from '@angular/material/list';
 import { MenuComponent } from './menu/menu.component';
+import { NgbTypeaheadModule, NgbDatepickerModule, NgbModalModule } from '@ng-bootstrap/ng-bootstrap';
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 
 
 @NgModule({
@@ -23,8 +25,13 @@ import { MenuComponent } from './menu/menu.component';
   imports: [
     CommonModule,
     PuntoDeVentaRoutingModule,
-    MatToolbarModule,MatButtonModule,MatSidenavModule,MatIconModule,MatListModule
+    MatToolbarModule,MatButtonModule,MatSidenavModule,MatIconModule,MatListModule,
     
+    NgbTypeaheadModule,
+    NgbDatepickerModule,
+    NgbModalModule,
+    FormsModule,
+    ReactiveFormsModule
   ]
 })
 export class PuntoDeVentaModule { }
