@@ -1,3 +1,9 @@
-# BMS  Business Management System
+# BMS
 
-This project is a kind of ERP for  medium & small enterprises. The core of this API REST has made in NodeJS Express with Postgresql
+## Business Management System
+This project pretends be a kind of ERP for small and medium enterprises
+
+#### Specifications
+The core of this application is an API REST made in NodeJS with Express 
+The Database is made in Postgres
+The Front end is made in Angular 8
